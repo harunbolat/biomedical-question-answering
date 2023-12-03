@@ -1,0 +1,14 @@
+python run_squad.py \
+  --vocab_file=./uncased_L-12_H-768_A-12/vocab.txt \
+  --bert_config_file=./uncased_L-12_H-768_A-12/bert_config.json \
+  --init_checkpoint=./OUTPUT_DIR_BIOASQ_9B_TRAIN_MODEL/model.ckpt-9017 \
+  --do_train=False \
+  --train_file=./BIOASQ_DIR/bioasq9b-squad.json \
+  --do_predict=True \
+  --predict_file=./BIOASQ_DIR/9B5_golden_test.json \
+  --train_batch_size=12 \
+  --learning_rate=3e-5 \
+  --num_train_epochs=2.0 \
+  --max_seq_length=384 \
+  --doc_stride=128 \
+  --output_dir=./OUTPUT_DIR_BIOASQ_9B/ \
